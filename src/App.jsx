@@ -1,13 +1,11 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import SecondsCounter from './secondscounter'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
+    <>  
+      <SecondsCounter seconds={5} segundos_regresiva={20}/>
      
     </>
   )
