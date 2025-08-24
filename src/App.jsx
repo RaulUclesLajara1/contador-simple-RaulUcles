@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>  
-      <SecondsCounter seconds={5} segundos_regresiva={20}/>
+      <SecondsCounter seconds={2} segundos_regresiva={20} segundos_alerta={5}/>
      
     </>
   )
