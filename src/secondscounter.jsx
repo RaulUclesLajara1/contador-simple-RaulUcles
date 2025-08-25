@@ -22,14 +22,13 @@ const SecondsCounter = ({ segundos_incio, segundos_regresiva, segundos_alerta}) 
         
         
         if (visible && !regresiva){
-          setContador((seg) => seg +1 )
+          setContador((contador) => contador +1 )
           if (contador == segundos_alerta){
           setAlerta(true)
-        }
-          
-        }
+        }}
         else if (visible && regresiva){
-          setContador((seg) => seg > 0 ? seg -1: seg)
+          console.log('hola')
+          setContador((contador) => contador > 0 ? contador -1: contador)
         }
         if(reiniciar){
           setContador(0);
@@ -38,7 +37,7 @@ const SecondsCounter = ({ segundos_incio, segundos_regresiva, segundos_alerta}) 
         
         
     },1000)
-  },[contador,visible])
+  },[contador,visible,reiniciar])
 
 
 
