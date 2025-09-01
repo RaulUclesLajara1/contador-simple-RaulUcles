@@ -13,10 +13,11 @@ const SecondsCounter = ({ segundos_incio, segundos_regresiva, segundos_alerta}) 
     }, segundos_incio * 1000);
   }, [segundos_incio]);
 
+  
 
   useEffect(() => {
-    setTimeout(() => {
-
+        const intervalo = setInterval(() => {
+        
         setAlerta(false);
         
         
@@ -27,7 +28,7 @@ const SecondsCounter = ({ segundos_incio, segundos_regresiva, segundos_alerta}) 
           setAlerta(true)
         }}
         else if (visible && regresiva){
-          console.log('hola')
+
           setContador((contador) => contador > 0 ? contador -1: contador)
         }
         if(reiniciar){
@@ -37,7 +38,11 @@ const SecondsCounter = ({ segundos_incio, segundos_regresiva, segundos_alerta}) 
         
         
     },1000)
-  },[contador,visible,reiniciar])
+    return (
+      clearInterval(intervalo)
+    )
+
+  },[visible,reiniciar])
 
 
 
