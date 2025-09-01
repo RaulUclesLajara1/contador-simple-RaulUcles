@@ -38,11 +38,9 @@ const SecondsCounter = ({ segundos_incio, segundos_regresiva, segundos_alerta}) 
         
         
     },1000)
-    return (
-      clearInterval(intervalo)
-    )
+    return () => clearInterval(intervalo)
 
-  },[visible,reiniciar])
+  },[contador,visible,reiniciar])
 
 
 
